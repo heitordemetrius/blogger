@@ -1,4 +1,4 @@
-/* begin external css: flickity.css
+<style type="text/css"> /* begin external css: flickity.css
 /*! Flickity v2.0.4
  * https://npmcdn.com/flickity@2/dist/flickity.css
 https://flickity.metafizzy.co
@@ -605,3 +605,4 @@ background-color:black; }
     padding: 8px;
    border-radius: 8px; 
 }
+</style>
