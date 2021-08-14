@@ -1,0 +1,607 @@
+/* begin external css: flickity.css
+/*! Flickity v2.0.4
+ * https://npmcdn.com/flickity@2/dist/flickity.css
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+          tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  background: hsla(0, 0%, 100%, 0.05);
+  cursor: pointer;
+  /* vertically center */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.flickity-prev-next-button:hover { background: white; }
+
+.flickity-prev-next-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #09F;
+}
+
+.flickity-prev-next-button:active {
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button.previous { left: 10px; }
+.flickity-prev-next-button.next { right: 10px; }
+ right to left
+.flickity-rtl .flickity-prev-next-button.previous {
+left: auto; 
+right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+right: auto;
+left: 10px;
+}
+
+.flickity-prev-next-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
+
+.flickity-prev-next-button svg {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: #999;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots { 
+   position: absolute; 
+   width: 100%; 
+   bottom: -25px; 
+   padding: 0; 
+   margin: 0; 
+   list-style: none; 
+   text-align: center; 
+   line-height: 1; 
+ } 
+
+ .flickity-rtl .flickity-page-dots { direction: rtl; } 
+
+ .flickity-page-dots .dot { 
+   display: inline-block; 
+   width: 10px; 
+   height: 10px; 
+   margin: 0 8px; 
+   background: #333; 
+   border-radius: 50%; 
+   opacity: 0.25; 
+   cursor: pointer; 
+ } 
+  
+ .flickity-page-dots .dot.is-selected { 
+   opacity: 1; 
+} 
+
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* end external css: flickity.css */
+/*! Flickity v2.0.4
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.carousel {
+  background: #;
+}
+
+.carousel-main {
+  margin-bottom: 8px;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: 300px;
+  margin-right: 8px;
+  background: #;
+  border-radius: 5px;
+  /* counter-increment: carousel-cell; */
+}
+
+/* cell number */ 
+/* .carousel-cell:before { */
+/*   display: block; */
+/*   text-align: center; */
+/*   content: counter(carousel-cell); */
+/*   line-height: 200px; */
+/*   font-size: 80px; */
+/*   color: white; */
+/* } */
+
+.carousel-nav .carousel-cell {
+  height:100px;
+  width: 100px;
+}
+
+/* .carousel-nav .carousel-cell:before { */
+/*   font-size: 50px; */
+/*   line-height: 80px; */
+/* } */
+
+/* .carousel-nav .carousel-cell.is-nav-selected { */
+/*   background: #ED2; */
+/* } */
+
+/* Atelierbram edit */
+.carousel-main img {
+  display: block;
+  margin: 0 auto; 
+}
+
+
+
+
+
+/* TAB TABLE */
+
+tabtable {
+  margin: 0 auto;
+  padding: 0px 0px 0px 0px;
+}
+
+tabsection {
+  display: none;
+  padding: 0px 30px 10px 30px;
+  border: 1px solid #ddd;
+}
+
+input.tab {
+  display: none;
+}
+
+label.tab {
+  width: 70px;
+  display: inline-block;
+  margin: 0px -5px -1px 0px;
+  padding: 15px 23px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #bbb;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+label.tab:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  
+}
+
+label.tab[for*='1']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f15c"; }
+label.tab[for*='2']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3fa"; }
+label.tab[for*='3']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f2db"; }
+label.tab[for*='4']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f538"; }
+label.tab[for*='5']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f030"; }
+label.tab[for*='6']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f519"; }
+label.tab[for*='7']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f1eb"; }
+label.tab[for*='8']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f028"; }
+label.tab[for*='9']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f242"; }
+label.tab[for*='10']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f11b"; }
+label.tab[for*='11']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f03d"; }
+label.tab[for*='12']:before { font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f381"; }
+
+
+
+label.tab:hover {
+  color: #888;
+  cursor: pointer;
+  background: #fff;
+  transition: all 1s ease;
+}
+
+input.tab:checked + label.tab {
+  color: #555;
+  border: 1px solid #ddd;
+  
+  border-bottom: 1px solid #fff;
+  background: #ffffff;
+}
+
+#tab01:checked ~ #content1,
+#tab02:checked ~ #content2,
+#tab03:checked ~ #content3,
+#tab04:checked ~ #content4,
+#tab05:checked ~ #content5,
+#tab06:checked ~ #content6,
+#tab07:checked ~ #content7,
+#tab08:checked ~ #content8,
+#tab09:checked ~ #content9,
+#tab10:checked ~ #content10,
+#tab11:checked ~ #content11,
+#tab12:checked ~ #content12{
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  label.tab {
+    font-size: 0;
+  }
+  label.tab:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+label.tab {
+    padding: 15px;
+  }
+}
+
+/* h1 style */
+h15 {font-family:,arial, sans-serif, courrier; font-size: 24px; font-weight: 800; font-color: #000 }
+
+
+
+
+
+
+/* Create two equal columns that floats next to each other */
+.column56 {
+  float: left;
+  width: 50%;
+  
+}
+
+
+/* Clear floats after the columns */
+.row56:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column56 {
+    width: 100%;
+   
+ }
+.row56:after { height: 20px }
+}
+
+/* img border */
+img{ border-radius: 5px}
+
+/* scroll widget*/
+.makesticking{padding-top:85px;position:fixed!important;top:0}
+
+/* whatsappbutton */
+
+.whatsapp1 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+}
+
+.whatsapp1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.2);
+  transition: all 0.3s ease-in;
+  background: #25D366;
+  color: #fff;
+  border: 0;
+  height: 4em;
+  width: 4em;
+  border-radius: 50%;
+  position: relative;
+  outline: none;
+}
+
+.whatsapp1:hover a {
+  background: #00c300;
+  cursor: pointer;
+}
+
+.whatsapp1 a:before {
+  box-shadow: 0 0.5em 1em rgba(0,0,0,0.1);
+  content: 'Ajuda Para Comprar?';
+  position: absolute;
+  border: 1px solid rgba(0,0,0,0.1);
+  background: #fff;
+  color: black;
+  padding: 1em;
+  border-radius: 5em 5em 0.5em 5em;
+left: 0;
+  top: 50%;
+  transform: translateX(-110%)translateY(-80%);
+  width: 8em;
+  font-weight: semibold;
+  text-align: center;
+}
+ 
+@media (max-width: 600px) {
+  .whatsapp1 a:before {
+    display: none;
+  }
+}
+
+
+/* graficos Polígono */
+
+#chartdiv1 {
+	width	: 100%;
+	height	: 380px;
+}
+
+/* graficos ranking */
+
+#chartdiv2 {
+	max-width	: 100%;
+	height	: 350px;
+}
+.amcharts-chart-div a {
+  display: none !important;
+}
+
+
+/* graficos preço anual */
+
+#chartdiv3 {
+	width	: 100%;
+	height	: 450px;
+}
+
+.doc-link {
+  margin: 20px;
+}
+
+/* graficos dólar */
+
+#chartdiv4{
+  width: 100%;
+  height: 350px;
+}
+
+.amcharts-graph-AmGraph-2 {
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 500%;
+  stroke-dasharray: 0 /;    /* fixes IE prob */
+  stroke-dashoffset: 0 /;   /* fixes IE prob */
+  -webkit-animation: am-draw 30s;
+  animation: am-draw 30s;
+}
+
+@keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@-webkit-keyframes am-draw {
+    0% {
+        stroke-dashoffset: 500%;
+    }
+    100% {
+        stroke-dashoffset: 0%;
+    }
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes flickerIn {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.amcharts-category-axis, .amcharts-value-axis, .amcharts-plot-area-left, #description, .amcharts-graph-column, .amcharts-graph-AmGraph-1 {
+  opacity: 0;
+  -webkit-animation: fadeIn 1.5s ease-in 1 forwards;
+  -moz-animation:    fadeIn 1.5s ease-in 1 forwards;
+  -o-animation:      fadeIn 1.5s ease-in 1 forwards;
+  animation:         fadeIn 1.5s ease-in 1 forwards;
+}
+
+/* .amcharts-category-axis, .amcharts-plot-area-bottom {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+} */
+
+
+/* graficos dólar */
+
+
+.progress {
+      position: relative;
+      height: 2px;
+      display: block;
+      width: 100%;
+      background-color: white;
+      border-radius: 2px;
+      background-clip: padding-box;
+      /*margin: 0.5rem 0 1rem 0;*/
+      overflow: hidden;
+
+    }
+    .progress .indeterminate {
+background-color:black; }
+    .progress .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: #0d4cfb;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    .progress .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: #0d4cfb;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+              animation-delay: 1.15s; }
+
+    @-webkit-keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%; }
+      60% {
+        left: 100%;
+        right: -90%; }
+      100% {
+        left: 100%;
+        right: -90%; } }
+    @keyframes indeterminate {
+      0% {
+        left: -35%;
+        right: 100%; }
+      60% {
+        left: 100%;
+        right: -90%; }
+      100% {
+        left: 100%;
+        right: -90%; } }
+    @-webkit-keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%; }
+      60% {
+        left: 107%;
+        right: -8%; }
+      100% {
+        left: 107%;
+        right: -8%; } }
+    @keyframes indeterminate-short {
+      0% {
+        left: -200%;
+        right: 100%; }
+      60% {
+        left: 107%;
+        right: -8%; }
+      100% {
+        left: 107%;
+        right: -8%; } }
+
+
+.postTitle { text-align:center;}
+
+.tooltip-inner {
+  background-color: #000;
+  /*!important is not necessary if you place custom.css at the end of your css calls. For the purpose of this demo, it seems to be required in SO snippet*/
+  color: #fff;
+   width: 300px;
+    padding: 8px;
+   border-radius: 8px; 
+}
